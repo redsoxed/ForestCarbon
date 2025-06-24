@@ -15,7 +15,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #F8F9FA; 
+            background-color: #f8f9fa; 
         }
         .chart-container {
             position: relative;
@@ -26,31 +26,30 @@
             height: 350px;
             max-height: 400px;
         }
-        .radar-chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 350px;
-            max-height: 400px;
-        }
         @media (min-width: 768px) {
             .chart-container { height: 400px; }
-            .radar-chart-container { height: 400px; }
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-[#577590] mb-2;
+        }
+        .section-subtitle {
+             @apply mt-2 text-lg text-slate-600 max-w-3xl mx-auto;
         }
     </style>
 </head>
 <body class="text-slate-800">
     <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
-            <span class="text-xl font-bold text-[#0D3B66]">Forest Carbon</span>
+            <a href="#">
+                <img src="https://forestcarbon.com/wp-content/themes/forest-carbon/assets/images/logo.svg" alt="Forest Carbon Logo" class="h-7 w-auto">
+            </a>
             <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
-                <a href="#overview" class="text-slate-600 hover:text-[#F95738]">Overview</a>
-                <a href="#market" class="text-slate-600 hover:text-[#F95738]">Market Deep Dive</a>
-                <a href="#drivers" class="text-slate-600 hover:text-[#F95738]">Market Drivers</a>
-                <a href="#strategy" class="text-slate-600 hover:text-[#F95738]">Strategy</a>
-                <a href="#investment" class="text-slate-600 hover:text-[#F95738]">Investment</a>
+                <a href="#overview" class="text-slate-600 hover:text-[#F94144]">Overview</a>
+                <a href="#market" class="text-slate-600 hover:text-[#F94144]">Market</a>
+                <a href="#drivers" class="text-slate-600 hover:text-[#F94144]">Drivers</a>
+                <a href="#opportunities" class="text-slate-600 hover:text-[#F94144]">Opportunities</a>
+                <a href="#peg" class="text-slate-600 hover:text-[#F94144]">PEG Innovation</a>
+                <a href="#investment" class="text-slate-600 hover:text-[#F94144]">Investment</a>
             </nav>
         </div>
     </header>
@@ -58,46 +57,46 @@
     <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
         <section class="text-center mb-16 md:mb-24">
-            <h1 class="text-4xl md:text-6xl font-extrabold text-[#0D3B66] leading-tight mb-4">Pioneering the Future of Environmental Assets</h1>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-[#577590] leading-tight mb-4">Pioneering the Future of Environmental Assets</h1>
             <p class="text-lg text-slate-600 max-w-3xl mx-auto">A comprehensive analysis of Forest Carbon's pivotal role in the high-growth voluntary carbon market, blending ecological restoration with robust financial strategy.</p>
         </section>
 
         <section id="overview" class="scroll-mt-20 mb-16 md:mb-24">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-[#0D3B66]">A Proven Leader in Nature-Based Solutions</h2>
-                <p class="mt-2 text-slate-500">Since 2010, Forest Carbon has established a powerful track record of tangible impact and financial health.</p>
+                <h2 class="section-title">Executive Overview</h2>
+                <p class="section-subtitle">Since 2010, Forest Carbon has established a powerful track record of tangible impact and financial health.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center"><span class="text-5xl font-extrabold text-[#EE964B]">4.8M</span><p class="mt-2 font-semibold text-[#0D3B66]">Verified Credits Issued</p><p class="text-sm text-slate-500 mt-1">High-integrity credits from verified restoration projects.</p></div>
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center"><span class="text-5xl font-extrabold text-[#F95738]">437k+</span><p class="mt-2 font-semibold text-[#0D3B66]">Hectares Managed</p><p class="text-sm text-slate-500 mt-1">Critical ecosystems including tropical forests and wetlands.</p></div>
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center"><span class="text-5xl font-extrabold text-[#0D3B66]">Top 5</span><p class="mt-2 font-semibold text-[#0D3B66]">Global Developer Ranking</p><p class="text-sm text-slate-500 mt-1">Recognized for excellence in forest restoration projects.</p></div>
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center"><span class="text-5xl font-extrabold text-[#3D2B3D]">$9.40</span><p class="mt-2 font-semibold text-[#0D3B66]">Weighted Avg. Price</p><p class="text-sm text-slate-500 mt-1">Demonstrates a proven, profitable, and bankable business model.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center"><span class="text-5xl font-extrabold text-[#F8961E]">4.8M</span><p class="mt-2 font-semibold text-[#577590]">Verified Credits Issued</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center"><span class="text-5xl font-extrabold text-[#F94144]">437k+</span><p class="mt-2 font-semibold text-[#577590]">Hectares Managed</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center"><span class="text-5xl font-extrabold text-[#90BE6D]">Top 5</span><p class="mt-2 font-semibold text-[#577590]">Global Developer Ranking</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center"><span class="text-5xl font-extrabold text-[#43AA8B]">$9.40</span><p class="mt-2 font-semibold text-[#577590]">Weighted Avg. Price</p></div>
             </div>
         </section>
 
         <section id="market" class="scroll-mt-20 mb-16 md:mb-24">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-[#0D3B66]">Market Deep Dive: The Decisive "Flight to Quality"</h2>
-                <p class="mt-2 text-slate-500">The voluntary carbon market (VCM) is maturing, with a clear and growing preference for specific, high-integrity removal credits.</p>
+                <h2 class="section-title">Market Deep Dive: The Decisive "Flight to Quality"</h2>
+                <p class="section-subtitle">The voluntary carbon market (VCM) is maturing, with a clear and growing preference for specific, high-integrity removal credits.</p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold text-[#0D3B66] mb-4">The Soaring Premium on Removals</h3>
-                    <p class="text-sm text-slate-600 mb-4">In 2024, credits from removal projects (reforestation) commanded a massive 381% price premium over avoidance credits, up from 245% in 2023. This accelerating trend directly benefits Forest Carbon's core product.</p>
+                    <h3 class="text-xl font-bold text-[#577590] mb-4">The Soaring Premium on Removals</h3>
+                    <p class="text-sm text-slate-600 mb-4">In 2024, credits from removal projects commanded a massive 381% price premium over avoidance credits, up from 245% in 2023. This accelerating trend directly benefits Forest Carbon's core product.</p>
                     <div class="chart-container h-64 md:h-80"><canvas id="removalsPremiumChart"></canvas></div>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold text-[#0D3B66] mb-4">Explosive Growth Projections</h3>
+                    <h3 class="text-xl font-bold text-[#577590] mb-4">Explosive Growth Projections</h3>
                     <p class="text-sm text-slate-600 mb-4">Leading analysts project exponential growth in the VCM, with demand potentially increasing 15-100x by 2050. Forest Carbon is positioned to capture a significant share of this expansion.</p>
                     <div class="chart-container h-64 md:h-80"><canvas id="marketGrowthChart"></canvas></div>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold text-[#0D3B66] mb-4">Removals: High Demand, Low Supply</h3>
-                     <p class="text-sm text-slate-600 mb-4">Despite intense demand, high-quality removal credits make up a tiny fraction (5%) of the total market supply, with ARR projects comprising 99% of that slice. This scarcity creates a significant opportunity for specialized developers.</p>
+                    <h3 class="text-xl font-bold text-[#577590] mb-4">Removals: High Demand, Low Supply</h3>
+                    <p class="text-sm text-slate-600 mb-4">Despite intense demand, high-quality removal credits make up a tiny fraction (5%) of the total market supply, with ARR projects comprising 99% of that slice. This scarcity creates a significant opportunity for specialized developers.</p>
                     <div class="chart-container h-64 md:h-80"><canvas id="supplyDemandChart"></canvas></div>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold text-[#0D3B66] mb-4">The Value of Recent Vintages</h3>
+                    <h3 class="text-xl font-bold text-[#577590] mb-4">The Value of Recent Vintages</h3>
                     <p class="text-sm text-slate-600 mb-4">Corporate buyers pay a large premium (up to 217%) for recently issued credits. This favors developers with active project cycles who can deliver new supply under the latest, most trusted methodologies.</p>
                     <div class="chart-container h-64 md:h-80"><canvas id="vintagePremiumChart"></canvas></div>
                 </div>
@@ -106,67 +105,100 @@
         
         <section id="drivers" class="scroll-mt-20 mb-16 md:mb-24">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-[#0D3B66]">Powerful Market Drivers</h2>
-                <p class="mt-2 text-slate-500">Structural shifts in regulation, finance, and corporate strategy are creating powerful tailwinds for long-term growth.</p>
+                <h2 class="section-title">Powerful Market Drivers</h2>
+                <p class="section-subtitle">Structural shifts in regulation, finance, and corporate strategy are creating powerful tailwinds for long-term growth.</p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-lg shadow-lg space-y-4">
-                    <h3 class="text-xl font-bold text-center text-[#0D3B66]">Indonesia: Our Strategic Moat</h3>
-                    <div class="text-sm text-slate-600"><strong class="text-[#F95738]">National Green Fund:</strong> A planned $65B government fund to finance large-scale restoration, backed by carbon sales.</div>
-                    <div class="text-sm text-slate-600"><strong class="text-[#F95738]">Regulatory Infrastructure:</strong> A national registry (SRN) and readiness for Article 6.2 of the Paris Agreement position the country as a key international player.</div>
-                    <div class="text-sm text-slate-600"><strong class="text-[#F95738]">Operational Advantage:</strong> High barriers to entry and strong controls favor experienced local actors like Forest Carbon over more permissive but riskier jurisdictions.</div>
+                    <h3 class="text-xl font-bold text-center text-[#577590]">Indonesia: Our Strategic Moat</h3>
+                    <div class="text-sm text-slate-600"><strong class="text-[#F3722C]">National Green Fund:</strong> A planned $65B government fund to finance large-scale restoration, backed by carbon sales.</div>
+                    <div class="text-sm text-slate-600"><strong class="text-[#F3722C]">Regulatory Infrastructure:</strong> A national registry (SRN) and readiness for Article 6.2 of the Paris Agreement position the country as a key international player.</div>
+                    <div class="text-sm text-slate-600"><strong class="text-[#F3722C]">Operational Advantage:</strong> High barriers to entry and strong controls favor experienced local actors like Forest Carbon over more permissive but riskier jurisdictions.</div>
                 </div>
                 <div class="bg-white p-8 rounded-lg shadow-lg space-y-4">
-                    <h3 class="text-xl font-bold text-center text-[#0D3B66]">Global Regulatory Convergence</h3>
-                    <div class="text-sm text-slate-600"><strong class="text-[#F95738]">Vietnam & India:</strong> Developing domestic Emissions Trading Systems (ETS), set to launch by 2029 and 2026 respectively.</div>
-                     <div class="text-sm text-slate-600"><strong class="text-[#F95738]">Brazil:</strong> Actively building a regulated market under its Ecological Transformation Plan.</div>
-                    <div class="text-sm text-slate-600"><strong class="text-[#F95738]">South Korea & China:</strong> Mature, large-scale ETS platforms are already operational, demonstrating the global trend toward standardized carbon pricing.</div>
+                    <h3 class="text-xl font-bold text-center text-[#577590]">Global Regulatory Convergence</h3>
+                    <div class="text-sm text-slate-600"><strong class="text-[#F3722C]">Vietnam & India:</strong> Developing domestic Emissions Trading Systems (ETS), set to launch by 2029 and 2026 respectively.</div>
+                     <div class="text-sm text-slate-600"><strong class="text-[#F3722C]">Brazil:</strong> Actively building a regulated market under its Ecological Transformation Plan.</div>
+                    <div class="text-sm text-slate-600"><strong class="text-[#F3722C]">South Korea & China:</strong> Mature, large-scale ETS platforms are already operational, demonstrating the global trend toward standardized carbon pricing.</div>
                 </div>
                 <div class="bg-white p-8 rounded-lg shadow-lg space-y-4">
-                    <h3 class="text-xl font-bold text-center text-[#0D3B66]">Accelerating Corporate Demand</h3>
-                     <div class="text-sm text-slate-600"><strong class="text-[#F95738]">Record Retirements:</strong> Companies retired 164M credits in 2023, up 6% YoY, showing consistent demand despite market turbulence.</div>
-                    <div class="text-sm text-slate-600"><strong class="text-[#F95738]">Deep Decarbonization:</strong> Studies show companies buying credits reduce their own emissions nearly twice as fast as non-buyers.</div>
-                    <div class="text-sm text-slate-600"><strong class="text-[#F95738]">Forward Agreements:</strong> Major corporations are entering long-term purchase agreements, signaling strong, durable demand for future supply.</div>
+                    <h3 class="text-xl font-bold text-center text-[#577590]">Accelerating Corporate Demand</h3>
+                     <div class="text-sm text-slate-600"><strong class="text-[#F3722C]">Record Retirements:</strong> Companies retired 164M credits in 2023, up 6% YoY, showing consistent demand despite market turbulence.</div>
+                    <div class="text-sm text-slate-600"><strong class="text-[#F3722C]">Deep Decarbonization:</strong> Studies show companies buying credits reduce their own emissions nearly twice as fast as non-buyers.</div>
+                    <div class="text-sm text-slate-600"><strong class="text-[#F3722C]">Forward Agreements:</strong> Major corporations are entering long-term purchase agreements, signaling strong, durable demand for future supply.</div>
                 </div>
             </div>
         </section>
 
-        <section id="strategy" class="scroll-mt-20 mb-16 md:mb-24">
+        <section id="opportunities" class="scroll-mt-20 mb-16 md:mb-24">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-[#0D3B66]">A Multi-Faceted Strategy for Growth & Innovation</h2>
-                <p class="mt-2 text-slate-500">Our forward-looking strategy is designed to de-risk operations, open new revenue streams, and define the future of nature-based finance.</p>
+                 <h2 class="section-title">A Multi-Faceted Strategy for Growth & Innovation</h2>
+                <p class="section-subtitle">Our strategy leverages our core strengths while expanding into new, value-accretive areas to build long-term resilience and market leadership.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-lg text-center"><span class="text-4xl">🤝</span><h3 class="text-xl font-bold text-[#0D3B66] mt-4 mb-2">Secure Direct Off-takes</h3><p class="text-sm text-slate-600">Mitigate market volatility by focusing on direct, long-term agreements with high-quality corporate buyers, ensuring revenue certainty and maintaining the integrity of our credits.</p></div>
-                <div class="bg-white p-8 rounded-lg shadow-lg text-center"><span class="text-4xl">🛍️</span><h3 class="text-xl font-bold text-[#0D3B66] mt-4 mb-2">Expand to Retail</h3><p class="text-sm text-slate-600">Launch a low-cost, high-upside retail platform to tap into a new segment of conscious consumers, building brand visibility and piloting future biodiversity products.</p></div>
-                <div class="bg-white p-8 rounded-lg shadow-lg text-center"><span class="text-4xl">🏦</span><h3 class="text-xl font-bold text-[#0D3B66] mt-4 mb-2">Innovate with Finance</h3><p class="text-sm text-slate-600">Pioneer the "Payment for Environmental Guarantees" (PEG), a first-of-its-kind securitized product to monetize biodiversity and lead capital market development for nature.</p></div>
-            </div>
-            <div class="bg-white p-8 rounded-lg shadow-lg mt-12">
-                <h3 class="text-2xl font-bold text-[#0D3B66] text-center mb-6">The PEG Structure: A Financial Differentiator</h3>
-                <div class="flex flex-col md:flex-row justify-center items-stretch gap-4 text-center">
-                    <div class="flex-1 border-2 border-[#F95738] bg-[#FFF4F1] p-4 rounded-md flex flex-col justify-center"><h4 class="font-bold text-[#F95738]">Highest Risk: Bottom Tranche</h4><p class="text-sm text-slate-600">Biodiversity Credits</p></div>
-                    <div class="text-2xl font-bold text-slate-400 self-center mx-2">➞</div>
-                    <div class="flex-1 border-2 border-[#EE964B] bg-[#FFF9F1] p-4 rounded-md flex flex-col justify-center"><h4 class="font-bold text-[#EE964B]">Medium Risk: Middle Tranche</h4><p class="text-sm text-slate-600">Lower-Quality Removal / Avoidance Credits</p></div>
-                    <div class="text-2xl font-bold text-slate-400 self-center mx-2">➞</div>
-                    <div class="flex-1 border-2 border-[#0D3B66] bg-[#F0F4F8] p-4 rounded-md flex flex-col justify-center"><h4 class="font-bold text-[#0D3B66]">Lowest Risk: Top Tranche</h4><p class="text-sm text-slate-600">High-Integrity Removal Credits</p></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-[#577590] mb-4">Core Business & Diversification</h3>
+                    <p class="text-sm text-slate-600 mb-4">While concession acquisition and high-integrity carbon credits remain our anchor, we are strategically diversifying our revenue. We are targeting at least 10% of revenue from non-carbon Payments for Ecosystem Services (PES) to hedge against carbon price volatility.</p>
+                    <div class="chart-container h-64 md:h-80"><canvas id="revenueMixChart"></canvas></div>
                 </div>
-                 <p class="text-center mt-6 text-slate-600 max-w-2xl mx-auto">This structured product allows investors to choose their risk appetite while enabling us to monetize the full spectrum of our environmental assets, creating a new pathway to finance for nature.</p>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-[#577590] mb-4">Capital & Partnership Structure</h3>
+                    <p class="text-sm text-slate-600 mb-4">Our growth will be fueled by a disciplined blend of equity and debt. Strategic partners like Saratoga and Team Gold are critical for deal flow and de-risking new concession acquisitions, ensuring efficient capital deployment into high-quality projects.</p>
+                    <div class="flex flex-col h-full justify-center items-center space-y-4 p-4">
+                        <div class="text-center"><div class="font-bold text-lg text-[#F3722C]">$20-25M</div><div class="text-sm text-slate-500">Series B Equity</div></div>
+                        <div class="text-2xl text-slate-400">+</div>
+                        <div class="text-center"><div class="font-bold text-lg text-[#F9C74F]">$60-80M</div><div class="text-sm text-slate-500">DFI Structured Debt</div></div>
+                        <div class="text-2xl text-slate-400">↓</div>
+                         <div class="text-center bg-gray-100 p-4 rounded-lg w-full"><div class="font-bold text-lg text-[#43AA8B]">Large-Scale Restoration & Acquisition</div><div class="text-sm text-slate-500">Powered by strategic partnerships</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="peg" class="scroll-mt-20 mb-16 md:mb-24">
+            <div class="text-center mb-12">
+                <h2 class="section-title">Innovation Spotlight: The PEG Product</h2>
+                <p class="section-subtitle">The Payment for Environmental Guarantees (PEG) is our answer to market fragmentation and a key differentiator, creating a new pathway for environmental finance.</p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-1">
+                        <h3 class="text-2xl font-bold text-[#577590]">A Securitized, Tranched Structure</h3>
+                        <p class="mt-4 text-slate-600">The PEG is an over-the-counter (OTC) product that bundles different environmental assets into a single vehicle. This allows investors to select their desired level of risk and provides a monetization pathway for assets that are not yet bankable on their own, like biodiversity credits.</p>
+                    </div>
+                    <div class="md:col-span-2">
+                        <div class="space-y-3 p-4 border-l-4 border-slate-200">
+                            <div class="p-4 rounded-lg border-2 border-[#43AA8B] bg-green-50">
+                                <h4 class="font-bold text-[#43AA8B]">Lowest Risk: Top Tranche</h4>
+                                <p class="text-sm text-slate-600">High-integrity, verified carbon removal credits (ARR). The most mature and liquid asset class.</p>
+                            </div>
+                            <div class="p-4 rounded-lg border-2 border-[#F8961E] bg-yellow-50">
+                                <h4 class="font-bold text-[#F8961E]">Medium Risk: Middle Tranche</h4>
+                                <p class="text-sm text-slate-600">Lower-quality removal or avoidance credits (e.g., older vintages, different methodologies). Priced lower, with higher volatility.</p>
+                            </div>
+                             <div class="p-4 rounded-lg border-2 border-[#F94144] bg-red-50">
+                                <h4 class="font-bold text-[#F94144]">Highest Risk: Bottom Tranche</h4>
+                                <p class="text-sm text-slate-600">Biodiversity credits. Currently unbankable and illiquid, but with significant potential upside as the market develops.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="investment" class="scroll-mt-20">
              <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-[#0D3B66]">The Investment Opportunity</h2>
-                <p class="mt-2 text-slate-500">Capitalizing on a strong foundation to scale operations and meet surging market demand.</p>
+                <h2 class="section-title">The Investment Opportunity</h2>
+                <p class="section-subtitle">Capitalizing on a strong foundation to scale operations and meet surging market demand.</p>
             </div>
-            <div class="bg-[#0D3B66] text-white p-8 md:p-12 rounded-lg shadow-2xl">
+            <div class="bg-[#577590] text-white p-8 md:p-12 rounded-lg shadow-2xl">
                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div>
                         <h3 class="text-4xl font-extrabold text-white mb-4">Fueling the Next Wave of Growth</h3>
                         <p class="text-slate-300 mb-6">We are seeking strategic capital to expand our project pipeline and solidify our leadership position. This investment will directly fund large-scale restoration projects and enhance our operational capacity, with a target of $16M revenue in Horizon 1.</p>
                         <div class="space-y-4">
-                            <div class="bg-[#F95738]/20 p-4 rounded-md"><p class="text-lg font-bold text-white">Series B Equity Raise</p><p class="text-2xl font-extrabold text-[#F95738]">$20–$25 Million</p></div>
-                            <div class="bg-[#EE964B]/20 p-4 rounded-md"><p class="text-lg font-bold text-white">DFI Structured Debt</p><p class="text-2xl font-extrabold text-[#EE964B]">$60–$80 Million</p></div>
+                            <div class="bg-[#F94144]/20 p-4 rounded-md"><p class="text-lg font-bold text-white">Series B Equity Raise</p><p class="text-2xl font-extrabold text-[#F94144]">$20–$25 Million</p></div>
+                            <div class="bg-[#F8961E]/20 p-4 rounded-md"><p class="text-lg font-bold text-white">DFI Structured Debt</p><p class="text-2xl font-extrabold text-[#F8961E]">$60–$80 Million</p></div>
                         </div>
                     </div>
                     <div class="w-full">
@@ -176,19 +208,18 @@
                  </div>
             </div>
         </section>
-
     </main>
 
     <footer class="mt-16 md:mt-24 border-t border-slate-200">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-slate-500">
-            <p class="font-semibold text-[#0D3B66]">Forest Carbon</p>
+            <p class="font-semibold text-[#577590]">Forest Carbon</p>
             <p class="text-sm">Pioneering Environmental Asset Development</p>
         </div>
     </footer>
 
     <script>
         const vibrantPalette = {
-            orange: '#F95738', yellow: '#EE964B', darkBlue: '#0D3B66', darkPurple: '#3D2B3D', slate: 'rgb(51 65 85)', gridColor: '#e2e8f0'
+            red: '#F94144', orange: '#F3722C', yellowOrange: '#F8961E', saffron: '#F9C74F', pistachio: '#90BE6D', zomp: '#43AA8B', payne: '#577590', slate: 'rgb(51 65 85)', gridColor: '#e2e8f0'
         };
 
         const tooltipTitleCallback = (tooltipItems) => {
@@ -206,31 +237,37 @@
 
         new Chart(document.getElementById('removalsPremiumChart').getContext('2d'), {
             type: 'bar',
-            data: { labels: ['2023 Premium', '2024 Premium'], datasets: [{ label: 'Removal vs. Reduction Credit Premium', data: [245, 381], backgroundColor: [vibrantPalette.yellow, vibrantPalette.orange], borderWidth: 1 }] },
+            data: { labels: ['2023 Premium', '2024 Premium'], datasets: [{ label: 'Removal vs. Reduction Credit Premium', data: [245, 381], backgroundColor: [vibrantPalette.yellowOrange, vibrantPalette.orange], borderWidth: 1 }] },
             options: { responsive: true, maintainAspectRatio: false, plugins: { ...chartPlugins, legend: { display: false } }, scales: { x: { ...chartScales.x }, y: { ...chartScales.y, beginAtZero: true, ticks: { callback: value => value + '%' } } } }
         });
 
         new Chart(document.getElementById('marketGrowthChart').getContext('2d'), {
             type: 'line',
-            data: { labels: ['2021', '2025', '2030', '2050'], datasets: [{ label: 'McKinsey Proj. (Relative Growth)', data: [1, 5, 15, 100], borderColor: vibrantPalette.orange, backgroundColor: vibrantPalette.orange + '33', fill: true, tension: 0.3, }, { label: 'MSCI Proj. ($ Billions)', data: [1, 5, 35, 250], borderColor: vibrantPalette.darkBlue, backgroundColor: vibrantPalette.darkBlue + '33', fill: true, tension: 0.3, }] },
+            data: { labels: ['2021', '2025', '2030', '2050'], datasets: [{ label: 'McKinsey Proj. (Relative Growth)', data: [1, 5, 15, 100], borderColor: vibrantPalette.orange, backgroundColor: vibrantPalette.orange + '33', fill: true, tension: 0.3, }, { label: 'MSCI Proj. ($ Billions)', data: [1, 5, 35, 250], borderColor: vibrantPalette.payne, backgroundColor: vibrantPalette.payne + '33', fill: true, tension: 0.3, }] },
             options: { responsive: true, maintainAspectRatio: false, plugins: chartPlugins, scales: { x: { ...chartScales.x }, y: { ...chartScales.y, type: 'logarithmic', beginAtZero: true, ticks: { callback: value => value } } } }
         });
         
         new Chart(document.getElementById('supplyDemandChart').getContext('2d'), {
             type: 'doughnut',
-            data: { labels: ['High-Demand Removal Credits', 'Other Credit Types'], datasets: [{ data: [5, 95], backgroundColor: [vibrantPalette.orange, vibrantPalette.gridColor], borderColor: '#F8F9FA', borderWidth: 4 }] },
+            data: { labels: ['High-Demand Removal Credits', 'Other Credit Types'], datasets: [{ data: [5, 95], backgroundColor: [vibrantPalette.orange, vibrantPalette.gridColor], borderColor: '#f8f9fa', borderWidth: 4 }] },
             options: { responsive: true, maintainAspectRatio: false, plugins: { ...chartPlugins, legend: { position: 'bottom' } }, cutout: '70%' }
         });
 
         new Chart(document.getElementById('vintagePremiumChart').getContext('2d'), {
             type: 'bar',
-            data: { labels: ['Older Vintages (5+ years)', 'Recent Vintages (0-5 years)'], datasets: [{ label: 'Price Premium', data: [100, 217], backgroundColor: [vibrantPalette.yellow, vibrantPalette.orange], borderWidth: 1 }] },
+            data: { labels: ['Older Vintages (5+ years)', 'Recent Vintages (0-5 years)'], datasets: [{ label: 'Price Premium', data: [100, 217], backgroundColor: [vibrantPalette.yellowOrange, vibrantPalette.orange], borderWidth: 1 }] },
             options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { ...chartPlugins, legend: { display: false } }, scales: { x: { ...chartScales.x, ticks: { callback: value => value + '%' } }, y: { ...chartScales.y, grid: {display: false} } } }
+        });
+
+        new Chart(document.getElementById('revenueMixChart').getContext('2d'), {
+            type: 'pie',
+            data: { labels: ['High-Integrity Carbon', 'Non-Carbon PES'], datasets: [{ data: [90, 10], backgroundColor: [vibrantPalette.zomp, vibrantPalette.saffron], borderColor: '#f8f9fa', borderWidth: 4 }] },
+            options: { responsive: true, maintainAspectRatio: false, plugins: { ...chartPlugins, legend: { position: 'bottom' } } }
         });
 
         new Chart(document.getElementById('investmentChart').getContext('2d'), {
             type: 'doughnut',
-            data: { labels: ['Series B Equity', 'DFI Structured Debt'], datasets: [{ label: 'Investment Capital', data: [25, 80], backgroundColor: [vibrantPalette.orange, vibrantPalette.yellow], borderColor: vibrantPalette.darkBlue, borderWidth: 2, hoverOffset: 4 }] },
+            data: { labels: ['Series B Equity', 'DFI Structured Debt'], datasets: [{ label: 'Investment Capital', data: [25, 80], backgroundColor: [vibrantPalette.red, vibrantPalette.yellowOrange], borderColor: vibrantPalette.payne, borderWidth: 2, hoverOffset: 4 }] },
             options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { color: '#FFFFFF', font: { family: "'Inter', sans-serif" } } }, tooltip: { ...chartPlugins.tooltip, callbacks: { ...chartPlugins.tooltip.callbacks, label: (c) => `${c.label}: $${c.raw}M` } } } }
         });
     </script>
