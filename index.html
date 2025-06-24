@@ -227,58 +227,60 @@
         </div>
     </footer>
 
-    <script defer>
-        const vibrantPalette = {
-            red: '#F94144', orange: '#F3722C', yellowOrange: '#F8961E', saffron: '#F9C74F', pistachio: '#90BE6D', zomp: '#43AA8B', payne: '#577590', slate: 'rgb(51 65 85)', gridColor: '#e2e8f0'
-        };
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const vibrantPalette = {
+                red: '#F94144', orange: '#F3722C', yellowOrange: '#F8961E', saffron: '#F9C74F', pistachio: '#90BE6D', zomp: '#43AA8B', payne: '#577590', slate: 'rgb(51 65 85)', gridColor: '#e2e8f0'
+            };
 
-        const tooltipTitleCallback = (tooltipItems) => {
-            const item = tooltipItems[0]; let label = item.chart.data.labels[item.dataIndex];
-            return Array.isArray(label) ? label.join(' ') : label;
-        };
-        const chartPlugins = {
-            legend: { labels: { color: vibrantPalette.slate, font: { family: "'Inter', sans-serif" } } },
-            tooltip: { callbacks: { title: tooltipTitleCallback }, titleFont: { family: "'Inter', sans-serif" }, bodyFont: { family: "'Inter', sans-serif" } }
-        };
-        const chartScales = {
-            x: { ticks: { color: vibrantPalette.slate, font: { family: "'Inter', sans-serif" }}, grid: { display: false } },
-            y: { ticks: { color: vibrantPalette.slate, font: { family: "'Inter', sans-serif" } }, grid: { color: vibrantPalette.gridColor } }
-        };
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0]; let label = item.chart.data.labels[item.dataIndex];
+                return Array.isArray(label) ? label.join(' ') : label;
+            };
+            const chartPlugins = {
+                legend: { labels: { color: vibrantPalette.slate, font: { family: "'Inter', sans-serif" } } },
+                tooltip: { callbacks: { title: tooltipTitleCallback }, titleFont: { family: "'Inter', sans-serif" }, bodyFont: { family: "'Inter', sans-serif" } }
+            };
+            const chartScales = {
+                x: { ticks: { color: vibrantPalette.slate, font: { family: "'Inter', sans-serif" }}, grid: { display: false } },
+                y: { ticks: { color: vibrantPalette.slate, font: { family: "'Inter', sans-serif" } }, grid: { color: vibrantPalette.gridColor } }
+            };
 
-        new Chart(document.getElementById('removalsPremiumChart').getContext('2d'), {
-            type: 'bar',
-            data: { labels: ['2023 Premium', '2024 Premium'], datasets: [{ label: 'Removal vs. Reduction Credit Premium', data: [245, 381], backgroundColor: [vibrantPalette.yellowOrange, vibrantPalette.orange], borderWidth: 1 }] },
-            options: { responsive: true, maintainAspectRatio: false, plugins: { ...chartPlugins, legend: { display: false } }, scales: { x: { ...chartScales.x }, y: { ...chartScales.y, beginAtZero: true, ticks: { callback: value => value + '%' } } } }
-        });
+            new Chart(document.getElementById('removalsPremiumChart').getContext('2d'), {
+                type: 'bar',
+                data: { labels: ['2023 Premium', '2024 Premium'], datasets: [{ label: 'Removal vs. Reduction Credit Premium', data: [245, 381], backgroundColor: [vibrantPalette.yellowOrange, vibrantPalette.orange], borderWidth: 1 }] },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { ...chartPlugins, legend: { display: false } }, scales: { x: { ...chartScales.x }, y: { ...chartScales.y, beginAtZero: true, ticks: { callback: value => value + '%' } } } }
+            });
 
-        new Chart(document.getElementById('marketGrowthChart').getContext('2d'), {
-            type: 'line',
-            data: { labels: ['2021', '2025', '2030', '2050'], datasets: [{ label: 'McKinsey Proj. (Relative Growth)', data: [1, 5, 15, 100], borderColor: vibrantPalette.orange, backgroundColor: vibrantPalette.orange + '33', fill: true, tension: 0.3, }, { label: 'MSCI Proj. ($ Billions)', data: [1, 5, 35, 250], borderColor: vibrantPalette.payne, backgroundColor: vibrantPalette.payne + '33', fill: true, tension: 0.3, }] },
-            options: { responsive: true, maintainAspectRatio: false, plugins: chartPlugins, scales: { x: { ...chartScales.x }, y: { ...chartScales.y, type: 'logarithmic', beginAtZero: true, ticks: { callback: value => value } } } }
-        });
-        
-        new Chart(document.getElementById('supplyDemandChart').getContext('2d'), {
-            type: 'doughnut',
-            data: { labels: ['High-Demand Removal Credits', 'Other Credit Types'], datasets: [{ data: [5, 95], backgroundColor: [vibrantPalette.orange, vibrantPalette.gridColor], borderColor: '#f8f9fa', borderWidth: 4 }] },
-            options: { responsive: true, maintainAspectRatio: false, plugins: { ...chartPlugins, legend: { position: 'bottom' } }, cutout: '70%' }
-        });
+            new Chart(document.getElementById('marketGrowthChart').getContext('2d'), {
+                type: 'line',
+                data: { labels: ['2021', '2025', '2030', '2050'], datasets: [{ label: 'McKinsey Proj. (Relative Growth)', data: [1, 5, 15, 100], borderColor: vibrantPalette.orange, backgroundColor: vibrantPalette.orange + '33', fill: true, tension: 0.3, }, { label: 'MSCI Proj. ($ Billions)', data: [1, 5, 35, 250], borderColor: vibrantPalette.payne, backgroundColor: vibrantPalette.payne + '33', fill: true, tension: 0.3, }] },
+                options: { responsive: true, maintainAspectRatio: false, plugins: chartPlugins, scales: { x: { ...chartScales.x }, y: { ...chartScales.y, type: 'logarithmic', beginAtZero: true, ticks: { callback: value => value } } } }
+            });
+            
+            new Chart(document.getElementById('supplyDemandChart').getContext('2d'), {
+                type: 'doughnut',
+                data: { labels: ['High-Demand Removal Credits', 'Other Credit Types'], datasets: [{ data: [5, 95], backgroundColor: [vibrantPalette.orange, vibrantPalette.gridColor], borderColor: '#f8f9fa', borderWidth: 4 }] },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { ...chartPlugins, legend: { position: 'bottom' } }, cutout: '70%' }
+            });
 
-        new Chart(document.getElementById('vintagePremiumChart').getContext('2d'), {
-            type: 'bar',
-            data: { labels: ['Older Vintages (5+ years)', 'Recent Vintages (0-5 years)'], datasets: [{ label: 'Price Premium', data: [100, 217], backgroundColor: [vibrantPalette.yellowOrange, vibrantPalette.orange], borderWidth: 1 }] },
-            options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { ...chartPlugins, legend: { display: false } }, scales: { x: { ...chartScales.x, ticks: { callback: value => value + '%' } }, y: { ...chartScales.y, grid: {display: false} } } }
-        });
+            new Chart(document.getElementById('vintagePremiumChart').getContext('2d'), {
+                type: 'bar',
+                data: { labels: ['Older Vintages (5+ years)', 'Recent Vintages (0-5 years)'], datasets: [{ label: 'Price Premium', data: [100, 217], backgroundColor: [vibrantPalette.yellowOrange, vibrantPalette.orange], borderWidth: 1 }] },
+                options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { ...chartPlugins, legend: { display: false } }, scales: { x: { ...chartScales.x, ticks: { callback: value => value + '%' } }, y: { ...chartScales.y, grid: {display: false} } } }
+            });
 
-        new Chart(document.getElementById('revenueMixChart').getContext('2d'), {
-            type: 'pie',
-            data: { labels: ['High-Integrity Carbon', 'Non-Carbon PES'], datasets: [{ data: [90, 10], backgroundColor: [vibrantPalette.zomp, vibrantPalette.saffron], borderColor: '#f8f9fa', borderWidth: 4 }] },
-            options: { responsive: true, maintainAspectRatio: false, plugins: { ...chartPlugins, legend: { position: 'bottom' } } }
-        });
+            new Chart(document.getElementById('revenueMixChart').getContext('2d'), {
+                type: 'pie',
+                data: { labels: ['High-Integrity Carbon', 'Non-Carbon PES'], datasets: [{ data: [90, 10], backgroundColor: [vibrantPalette.zomp, vibrantPalette.saffron], borderColor: '#f8f9fa', borderWidth: 4 }] },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { ...chartPlugins, legend: { position: 'bottom' } } }
+            });
 
-        new Chart(document.getElementById('investmentChart').getContext('2d'), {
-            type: 'doughnut',
-            data: { labels: ['Series B Equity', 'DFI Structured Debt'], datasets: [{ label: 'Investment Capital', data: [25, 80], backgroundColor: [vibrantPalette.red, vibrantPalette.yellowOrange], borderColor: vibrantPalette.payne, borderWidth: 2, hoverOffset: 4 }] },
-            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { color: '#FFFFFF', font: { family: "'Inter', sans-serif" } } }, tooltip: { ...chartPlugins.tooltip, callbacks: { ...chartPlugins.tooltip.callbacks, label: (c) => `${c.label}: $${c.raw}M` } } } }
+            new Chart(document.getElementById('investmentChart').getContext('2d'), {
+                type: 'doughnut',
+                data: { labels: ['Series B Equity', 'DFI Structured Debt'], datasets: [{ label: 'Investment Capital', data: [25, 80], backgroundColor: [vibrantPalette.red, vibrantPalette.yellowOrange], borderColor: vibrantPalette.payne, borderWidth: 2, hoverOffset: 4 }] },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { color: '#FFFFFF', font: { family: "'Inter', sans-serif" } } }, tooltip: { ...chartPlugins.tooltip, callbacks: { ...chartPlugins.tooltip.callbacks, label: (c) => `${c.label}: $${c.raw}M` } } } }
+            });
         });
     </script>
 </body>
