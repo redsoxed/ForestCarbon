@@ -6,12 +6,13 @@
     <title>Forest Carbon: The Future of Environmental Assets</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
         .section-title {
-            @apply text-3xl font-bold text-gray-800 mb-4 pb-2 border-b-2 border-green-500;
+            @apply text-3xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-green-500;
         }
         .stat-card {
             @apply bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300;
@@ -24,6 +25,9 @@
         }
         .gradient-bg {
             background: linear-gradient(135deg, #f0fff4, #e6fffa);
+        }
+        .peer-card {
+            @apply bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300;
         }
     </style>
 </head>
@@ -51,12 +55,29 @@
                     <p class="stat-label">Hectares Under Management</p>
                 </div>
                 <div class="stat-card text-center">
-                    <p class="stat-number">$25M</p>
-                    <p class="stat-label">Series B Equity Fundraising Goal</p>
+                    <p class="stat-number">$16M</p>
+                    <p class="stat-label">Forecasted Revenue (Horizon 1)</p>
                 </div>
                 <div class="stat-card text-center">
                     <p class="stat-number">$9.40</p>
                     <p class="stat-label">Average Sales Price Per Ton</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capital Strategy Section -->
+        <section id="capital-strategy" class="my-12">
+            <h2 class="section-title">Capital Strategy for Growth</h2>
+            <div class="mt-6 grid md:grid-cols-2 gap-8 text-center">
+                <div class="bg-white p-8 rounded-lg shadow-xl border-t-4 border-green-500">
+                    <h3 class="text-2xl font-bold text-gray-800">Series B Equity</h3>
+                    <p class="stat-number">$25M</p>
+                    <p class="text-gray-600 mt-2">To expand origination, operations, and scale our acquisition model.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-xl border-t-4 border-blue-500">
+                    <h3 class="text-2xl font-bold text-gray-800">DFI Structured Debt</h3>
+                    <p class="stat-number">$60-80M</p>
+                    <p class="text-gray-600 mt-2">To fund large-scale forest and peatland restoration activities.</p>
                 </div>
             </div>
         </section>
@@ -67,19 +88,13 @@
             <div class="flex flex-col md:flex-row items-center gap-8 mt-8">
                 <div class="md:w-1/2">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-4">A Market in Transition</h3>
-                    <p class="mb-4">The voluntary carbon market (VCM) is experiencing explosive growth, projected to reach <span class="font-bold text-green-600">$35 billion by 2030</span>. This growth is driven by increasing scrutiny over credit quality and a clear preference for high-integrity, nature-based removal credits.</p>
+                    <p class="mb-4">The voluntary carbon market (VCM) is experiencing explosive growth, projected by MSCI to reach <span class="font-bold text-green-600">$35 billion by 2030 and $250 billion by 2050</span>. This growth is driven by increasing scrutiny over credit quality and a clear preference for high-integrity, nature-based removal credits.</p>
                     <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded-md">
                         <p><span class="font-bold">Key Trend:</span> Carbon removal credits were <span class="font-bold">381%</span> more expensive than reduction credits in 2024, signaling a major market shift towards quality.</p>
                     </div>
                 </div>
-                <div class="md:w-1/2">
-                    <!-- Placeholder for a chart -->
-                    <div class="bg-white p-6 rounded-lg shadow-lg h-64 flex items-center justify-center">
-                        <p class="text-gray-500 text-center">
-                            <span class="text-5xl">📈</span><br>
-                            Market Growth Projection Chart
-                        </p>
-                    </div>
+                <div class="md:w-1/2 bg-white p-6 rounded-lg shadow-lg">
+                    <canvas id="marketGrowthChart"></canvas>
                 </div>
             </div>
         </section>
@@ -88,17 +103,14 @@
         <section id="market-drivers" class="my-12">
             <h2 class="section-title">Key Drivers of Demand</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-                <!-- Indonesia -->
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="font-bold text-xl mb-2 text-green-700">Indonesia's Green Future</h3>
                     <p>With a planned <span class="font-semibold">$65 billion national green fund</span> and a structured regulatory system (SRN), Indonesia is a high-barrier, high-upside jurisdiction where our experience provides a unique advantage.</p>
                 </div>
-                <!-- International -->
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="font-bold text-xl mb-2 text-green-700">Global Regulatory Tailwinds</h3>
                     <p>Emerging Emissions Trading Systems (ETS) in <span class="font-semibold">Vietnam, India, and Brazil</span> are creating new markets for high-quality carbon credits, and we are positioned to expand.</p>
                 </div>
-                <!-- Corporate Demand -->
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="font-bold text-xl mb-2 text-green-700">Corporate Net-Zero Action</h3>
                     <p>Over <span class="font-semibold">2,100 companies</span> in the "Race to Zero" are driving demand. Companies buying credits reduce internal emissions nearly <span class="font-semibold">twice as fast</span> as non-buyers.</p>
@@ -112,53 +124,71 @@
              <div class="mt-8 bg-white p-8 rounded-lg shadow-xl">
                 <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">Innovating in Environmental Finance</h3>
                 <div class="relative">
-                    <!-- Timeline line -->
-                    <div class="border-l-2 border-green-500 absolute h-full top-0 left-4"></div>
-                    <!-- Timeline items -->
-                    <div class="mb-8 pl-12 relative">
-                        <div class="absolute w-6 h-6 bg-green-500 rounded-full -left-3 border-4 border-white"></div>
-                        <h4 class="font-bold text-xl text-green-700">Strategic Diversification</h4>
-                        <p class="text-gray-600">While focusing on carbon removals, we are targeting 10% of revenue from non-carbon ecosystem services to hedge against market volatility.</p>
-                    </div>
-                    <div class="mb-8 pl-12 relative">
-                        <div class="absolute w-6 h-6 bg-green-500 rounded-full -left-3 border-4 border-white"></div>
-                        <h4 class="font-bold text-xl text-green-700">Biodiversity Credit Strategy</h4>
-                        <p class="text-gray-600">Pioneering the architecture for future biodiversity markets through structured innovation, establishing us as thought leaders.</p>
-                    </div>
-                    <div class="pl-12 relative">
-                        <div class="absolute w-6 h-6 bg-green-500 rounded-full -left-3 border-4 border-white"></div>
-                        <h4 class="font-bold text-xl text-green-700">Product Innovation: The PEG</h4>
-                        <p class="text-gray-600">Introducing the <span class="font-semibold">Payment for Environmental Guarantees (PEG)</span>, a first-of-its-kind securitized product to unlock monetization for a range of environmental assets.</p>
+                    <div class="border-l-2 border-green-500 absolute h-full top-0 left-4 md:left-1/2 md:-translate-x-1/2"></div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="pl-12 md:pl-0 md:text-right md:pr-12">
+                            <h4 class="font-bold text-xl text-green-700">Strategic Diversification</h4>
+                            <p class="text-gray-600">While focusing on carbon removals, we are targeting 10% of revenue from non-carbon ecosystem services to hedge against market volatility.</p>
+                        </div>
+                        <div></div>
+                        <div></div>
+                        <div class="pl-12">
+                            <h4 class="font-bold text-xl text-blue-700">Biodiversity Credit Strategy</h4>
+                            <p class="text-gray-600">Pioneering the architecture for future biodiversity markets through structured innovation, establishing us as thought leaders.</p>
+                        </div>
+                        <div class="pl-12 md:pl-0 md:text-right md:pr-12">
+                             <h4 class="font-bold text-xl text-purple-700">Product Innovation: The PEG</h4>
+                            <p class="text-gray-600">Introducing the <span class="font-semibold">Payment for Environmental Guarantees (PEG)</span>, a first-of-its-kind securitized product to unlock monetization for a range of environmental assets.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- SWOT Analysis -->
-        <section id="swot" class="my-12">
-            <h2 class="section-title">SWOT Analysis</h2>
-            <div class="grid md:grid-cols-2 gap-8 mt-8">
-                <div class="bg-green-100 p-6 rounded-lg shadow-md">
-                    <h3 class="text-2xl font-bold text-green-800 mb-3">Strengths & Opportunities</h3>
-                    <ul class="list-disc list-inside space-y-2">
-                        <li>Top 5 global developer in forest restoration.</li>
-                        <li>Established presence in high-barrier Indonesian market.</li>
-                        <li>Strong partnerships with investors like Saratoga & AXA.</li>
-                        <li>Growing global demand for high-quality carbon credits.</li>
-                        <li>Ability to develop structured finance vehicles.</li>
-                    </ul>
+        <!-- Peer Analysis Section -->
+        <section id="peer-analysis" class="my-12">
+            <h2 class="section-title">Competitive Landscape: Peer Analysis</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
+                <div class="peer-card">
+                    <h3 class="font-bold text-xl text-gray-800">Permian Global</h3>
+                    <p class="mt-2 text-sm">Develops jurisdictionally aligned forest conservation and restoration projects in tropical regions, focusing on REDD+ and ARR methodologies.</p>
                 </div>
-                <div class="bg-red-100 p-6 rounded-lg shadow-md">
-                     <h3 class="text-2xl font-bold text-red-800 mb-3">Weaknesses & Threats</h3>
-                     <ul class="list-disc list-inside space-y-2">
-                        <li>Capital-intensive operations requiring scale.</li>
-                        <li>Dependence on evolving regulatory frameworks.</li>
-                        <li>Market volatility in carbon credit pricing.</li>
-                        <li>Technological breakthroughs in tech-based removals.</li>
-                        <li>Pipeline to be acquired is slow to materialize.</li>
-                     </ul>
+                <div class="peer-card">
+                    <h3 class="font-bold text-xl text-gray-800">Mombak</h3>
+                    <p class="mt-2 text-sm">"The Brazil version of Forest Carbon," Mombak converts degraded Amazon pastureland into native-species forests to generate long-term removal credits.</p>
+                </div>
+                <div class="peer-card">
+                    <h3 class="font-bold text-xl text-gray-800">The Landbanking Group</h3>
+                    <p class="mt-2 text-sm">Applies a methodology to price natural capital, creating a balance sheet asset through standardized digital units called Natural Capital Units (NCUs).</p>
+                </div>
+                <div class="peer-card">
+                    <h3 class="font-bold text-xl text-gray-800">Revalue</h3>
+                    <p class="mt-2 text-sm">A venture-backed nature technology company that designs and supports carbon projects by integrating remote sensing and data science.</p>
+                </div>
+                 <div class="peer-card">
+                    <h3 class="font-bold text-xl text-gray-800">Lestari (The Rimba Collective)</h3>
+                    <p class="mt-2 text-sm">Offers direct supply chain decarbonization (insetting) for major CPG companies, funding projects based on their palm oil footprint.</p>
+                </div>
+                <div class="peer-card">
+                    <h3 class="font-bold text-xl text-gray-800">Rubicon Carbon</h3>
+                    <p class="mt-2 text-sm">A TPG-backed platform redefining climate finance with securitized, actively managed portfolios of carbon credits like the Rubicon Carbon Tonne (RCT).</p>
                 </div>
             </div>
+        </section>
+        
+        <!-- Sales Analysis Section -->
+        <section id="sales-analysis" class="my-12">
+             <h2 class="section-title">Sales Analysis</h2>
+             <div class="grid md:grid-cols-2 gap-8 mt-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-center text-gray-700 mb-4">Topline Sales Statistics</h3>
+                    <canvas id="salesStatsChart"></canvas>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-center text-gray-700 mb-4">Sale Price Distribution</h3>
+                    <canvas id="salesDistChart"></canvas>
+                </div>
+             </div>
         </section>
 
     </main>
@@ -168,6 +198,93 @@
         <p>This infographic was generated based on the Forest Carbon Business Plan.</p>
         <p>&copy; 2025 Forest Carbon. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        // Data and configuration for charts
+        
+        // Market Growth Chart
+        const marketGrowthCtx = document.getElementById('marketGrowthChart').getContext('2d');
+        new Chart(marketGrowthCtx, {
+            type: 'bar',
+            data: {
+                labels: ['2021', '2030 (Proj.)', '2050 (Proj.)'],
+                datasets: [{
+                    label: 'Market Value (in Billions)',
+                    data: [1, 35, 250],
+                    backgroundColor: ['#4ade80', '#2dd4bf', '#1d4ed8'],
+                    borderColor: ['#22c55e', '#14b8a6', '#1e40af'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false },
+                    title: { display: true, text: 'VCM Growth Projection (USD)' }
+                },
+                scales: {
+                    y: { beginAtZero: true, ticks: { callback: (value) => '$' + value + 'B' } }
+                }
+            }
+        });
+
+        // Sales Stats Chart
+        const salesStatsCtx = document.getElementById('salesStatsChart').getContext('2d');
+        new Chart(salesStatsCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Weighted Avg.', 'Average', 'Median', 'Std. Dev'],
+                datasets: [
+                    {
+                        label: 'With Pachama',
+                        data: [9.40, 9.27, 7.50, 3.74],
+                        backgroundColor: 'rgba(34, 197, 94, 0.7)',
+                    },
+                    {
+                        label: 'Without Pachama',
+                        data: [7.03, 8.79, 7.50, 3.74],
+                        backgroundColor: 'rgba(59, 130, 246, 0.7)',
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'top' },
+                },
+                scales: {
+                     y: { ticks: { callback: (value) => '$' + value } }
+                }
+            }
+        });
+
+        // Sales Distribution Chart
+        const salesDistCtx = document.getElementById('salesDistChart').getContext('2d');
+        new Chart(salesDistCtx, {
+            type: 'bar',
+            data: {
+                labels: ['<5', '5-7', '7-9', '9-11', '11-13', '13-15', '>15'],
+                datasets: [{
+                    label: 'Sale Frequency',
+                    data: [3, 8, 10, 2, 1, 3, 2], // Approximated data from histogram
+                    backgroundColor: 'rgba(251, 191, 36, 0.7)',
+                    borderColor: 'rgba(217, 119, 6, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                 plugins: {
+                    legend: { display: false },
+                    title: { display: true, text: 'Frequency of Different Sale Prices' }
+                },
+                scales: {
+                    y: { beginAtZero: true, title: { display: true, text: 'Number of Sales'} },
+                    x: { title: { display: true, text: 'Price Bucket ($)'} }
+                }
+            }
+        });
+    </script>
 
 </body>
 </html>
