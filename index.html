@@ -3,226 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forest Carbon Business Plan Infographic</title>
-    <!-- Tailwind CSS for styling -->
+    <title>Forest Carbon: The Future of Environmental Assets</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@0.292.0/dist/lucide.min.js"></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for a more polished look */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* Tailwind's gray-50 */
-            scroll-behavior: smooth;
-        }
-        .page {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-top: 6rem;
-            padding-bottom: 6rem;
-            border-bottom: 1px solid #e5e7eb; /* gray-200 */
         }
         .section-title {
-            @apply text-4xl font-extrabold text-gray-800 mb-10 text-center;
+            @apply text-3xl font-bold text-gray-800 mb-4 pb-2 border-b-2 border-green-500;
         }
-        .card {
-            @apply bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300;
+        .stat-card {
+            @apply bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300;
         }
-        .icon-wrapper {
-            @apply flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center;
-        }
-        .stat-value {
-            @apply text-3xl md:text-4xl font-extrabold text-emerald-600;
+        .stat-number {
+            @apply text-4xl font-bold text-green-600;
         }
         .stat-label {
-            @apply text-base text-gray-500 mt-1;
+            @apply text-lg text-gray-600 mt-2;
         }
-        .nav-link {
-            @apply px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-100 transition-colors;
-        }
-        .peer-card-expanded {
-            @apply bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col h-full;
-        }
-        .detail-card {
-            @apply bg-white p-5 rounded-lg border border-gray-200;
+        .gradient-bg {
+            background: linear-gradient(135deg, #f0fff4, #e6fffa);
         }
     </style>
 </head>
-<body class="text-gray-700">
+<body class="bg-gray-50 text-gray-700">
 
-    <!-- Sticky Navigation -->
-    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
-        <div class="container mx-auto px-4">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <span class="font-bold text-xl text-emerald-800">Forest Carbon</span>
+    <!-- Header Section -->
+    <header class="gradient-bg text-center py-16 px-4">
+        <h1 class="text-5xl font-extrabold text-gray-800 tracking-tight">Forest Carbon</h1>
+        <p class="text-2xl mt-4 text-green-700">Pioneering High-Integrity Environmental Assets in Southeast Asia</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 md:p-8">
+
+        <!-- Executive Summary Section -->
+        <section id="executive-summary" class="my-12">
+            <h2 class="section-title">At a Glance: Our Impact & Vision</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+                <div class="stat-card text-center">
+                    <p class="stat-number">4.8M</p>
+                    <p class="stat-label">Verified Carbon Credits Issued</p>
                 </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#page1" class="nav-link">Overview & Market</a>
-                        <a href="#page2" class="nav-link">Strategy & Innovation</a>
-                        <a href="#page3" class="nav-link">Analysis & Landscape</a>
+                <div class="stat-card text-center">
+                    <p class="stat-number">437k+</p>
+                    <p class="stat-label">Hectares Under Management</p>
+                </div>
+                <div class="stat-card text-center">
+                    <p class="stat-number">$25M</p>
+                    <p class="stat-label">Series B Equity Fundraising Goal</p>
+                </div>
+                <div class="stat-card text-center">
+                    <p class="stat-number">$9.40</p>
+                    <p class="stat-label">Average Sales Price Per Ton</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Context Section -->
+        <section id="market-context" class="my-12">
+            <h2 class="section-title">The Voluntary Carbon Market is Maturing</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8 mt-8">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">A Market in Transition</h3>
+                    <p class="mb-4">The voluntary carbon market (VCM) is experiencing explosive growth, projected to reach <span class="font-bold text-green-600">$35 billion by 2030</span>. This growth is driven by increasing scrutiny over credit quality and a clear preference for high-integrity, nature-based removal credits.</p>
+                    <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded-md">
+                        <p><span class="font-bold">Key Trend:</span> Carbon removal credits were <span class="font-bold">381%</span> more expensive than reduction credits in 2024, signaling a major market shift towards quality.</p>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <!-- Placeholder for a chart -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg h-64 flex items-center justify-center">
+                        <p class="text-gray-500 text-center">
+                            <span class="text-5xl">📈</span><br>
+                            Market Growth Projection Chart
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </section>
 
-    <div class="container mx-auto p-4 md:p-8">
-
-        <!-- PAGE 1: Executive Summary, Market Context & Drivers -->
-        <section id="page1" class="page">
-            <header class="text-center mb-16">
-                <h1 class="text-5xl md:text-6xl font-extrabold text-emerald-800">Forest Carbon</h1>
-                <p class="text-2xl text-gray-600 mt-3">Transforming Undervalued Landscapes into High-Integrity Carbon & Ecosystem Service Assets</p>
-            </header>
-
-            <!-- At a Glance -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-                 <div class="card text-center"><div class="icon-wrapper bg-emerald-100 mx-auto mb-4"><i data-lucide="check-circle-2"></i></div><p class="stat-value">4.8M</p><p class="stat-label">Verified Credits Issued</p></div>
-                 <div class="card text-center"><div class="icon-wrapper bg-green-100 mx-auto mb-4"><i data-lucide="mountain"></i></div><p class="stat-value">437k+</p><p class="stat-label">Hectares Managed</p></div>
-                 <div class="card text-center"><div class="icon-wrapper bg-sky-100 mx-auto mb-4"><i data-lucide="piggy-bank"></i></div><p class="stat-value">$25M</p><p class="stat-label">Series B Equity Goal</p></div>
-                 <div class="card text-center"><div class="icon-wrapper bg-amber-100 mx-auto mb-4"><i data-lucide="bar-chart-3"></i></div><p class="stat-value">$16M</p><p class="stat-label">Horizon 1 Revenue</p></div>
+        <!-- Market Drivers Section -->
+        <section id="market-drivers" class="my-12">
+            <h2 class="section-title">Key Drivers of Demand</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <!-- Indonesia -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-bold text-xl mb-2 text-green-700">Indonesia's Green Future</h3>
+                    <p>With a planned <span class="font-semibold">$65 billion national green fund</span> and a structured regulatory system (SRN), Indonesia is a high-barrier, high-upside jurisdiction where our experience provides a unique advantage.</p>
+                </div>
+                <!-- International -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-bold text-xl mb-2 text-green-700">Global Regulatory Tailwinds</h3>
+                    <p>Emerging Emissions Trading Systems (ETS) in <span class="font-semibold">Vietnam, India, and Brazil</span> are creating new markets for high-quality carbon credits, and we are positioned to expand.</p>
+                </div>
+                <!-- Corporate Demand -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-bold text-xl mb-2 text-green-700">Corporate Net-Zero Action</h3>
+                    <p>Over <span class="font-semibold">2,100 companies</span> in the "Race to Zero" are driving demand. Companies buying credits reduce internal emissions nearly <span class="font-semibold">twice as fast</span> as non-buyers.</p>
+                </div>
             </div>
+        </section>
 
-            <h2 class="section-title">The Voluntary Carbon Market: Drivers & Dynamics</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <!-- Indonesian Advantage -->
-                <div class="card lg:col-span-1 space-y-4">
-                    <h3 class="text-xl font-bold text-emerald-800 flex items-center"><i data-lucide="shield-check" class="mr-2"></i>Indonesian Advantage</h3>
-                    <p class="font-semibold">A high-barrier, high-upside jurisdiction where Forest Carbon has an early-mover advantage.</p>
-                    <ul class="list-disc list-inside space-y-2 text-sm">
-                        <li><strong>$65B Green Fund:</strong> Government plan to use carbon credit sales to finance massive restoration efforts.</li>
-                        <li><strong>Regulatory Infrastructure:</strong> SRN registry and readiness for Article 6.2 favor experienced local actors amid restrictive permitting.</li>
-                        <li><strong>Operational Edge:</strong> Stronger regulatory controls and fewer controversies compared to markets like Brazil.</li>
+        <!-- Opportunities Section -->
+        <section id="opportunities" class="my-12">
+            <h2 class="section-title">Strategic Opportunities</h2>
+             <div class="mt-8 bg-white p-8 rounded-lg shadow-xl">
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">Innovating in Environmental Finance</h3>
+                <div class="relative">
+                    <!-- Timeline line -->
+                    <div class="border-l-2 border-green-500 absolute h-full top-0 left-4"></div>
+                    <!-- Timeline items -->
+                    <div class="mb-8 pl-12 relative">
+                        <div class="absolute w-6 h-6 bg-green-500 rounded-full -left-3 border-4 border-white"></div>
+                        <h4 class="font-bold text-xl text-green-700">Strategic Diversification</h4>
+                        <p class="text-gray-600">While focusing on carbon removals, we are targeting 10% of revenue from non-carbon ecosystem services to hedge against market volatility.</p>
+                    </div>
+                    <div class="mb-8 pl-12 relative">
+                        <div class="absolute w-6 h-6 bg-green-500 rounded-full -left-3 border-4 border-white"></div>
+                        <h4 class="font-bold text-xl text-green-700">Biodiversity Credit Strategy</h4>
+                        <p class="text-gray-600">Pioneering the architecture for future biodiversity markets through structured innovation, establishing us as thought leaders.</p>
+                    </div>
+                    <div class="pl-12 relative">
+                        <div class="absolute w-6 h-6 bg-green-500 rounded-full -left-3 border-4 border-white"></div>
+                        <h4 class="font-bold text-xl text-green-700">Product Innovation: The PEG</h4>
+                        <p class="text-gray-600">Introducing the <span class="font-semibold">Payment for Environmental Guarantees (PEG)</span>, a first-of-its-kind securitized product to unlock monetization for a range of environmental assets.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SWOT Analysis -->
+        <section id="swot" class="my-12">
+            <h2 class="section-title">SWOT Analysis</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-8">
+                <div class="bg-green-100 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-green-800 mb-3">Strengths & Opportunities</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Top 5 global developer in forest restoration.</li>
+                        <li>Established presence in high-barrier Indonesian market.</li>
+                        <li>Strong partnerships with investors like Saratoga & AXA.</li>
+                        <li>Growing global demand for high-quality carbon credits.</li>
+                        <li>Ability to develop structured finance vehicles.</li>
                     </ul>
                 </div>
-
-                <!-- Global & Corporate Drivers -->
-                <div class="card lg:col-span-2 space-y-6">
-                    <h3 class="text-xl font-bold text-gray-800 flex items-center"><i data-lucide="globe-2" class="mr-2"></i>International & Corporate Demand</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <h4 class="font-semibold mb-2">Global Regulatory Tailwinds</h4>
-                             <ul class="list-disc list-inside space-y-2 text-sm">
-                                <li><strong>Vietnam:</strong> Pilot ETS launching June 2025.</li>
-                                <li><strong>India:</strong> Transitioning to formal Carbon Credit Certificates.</li>
-                                <li><strong>Brazil:</strong> Developing a regulated market under its Ecological Transformation Plan.</li>
-                                <li><strong>South Korea & China:</strong> Operating large-scale, mature ETS systems.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold mb-2">Corporate Climate Action</h4>
-                             <ul class="list-disc list-inside space-y-2 text-sm">
-                                <li><strong>Net-Zero Pledges:</strong> 2,100+ "Race to Zero" companies plan to use credits.</li>
-                                <li><strong>Record Retirements:</strong> 164M credits retired in 2023 (up 6% YoY), led by Shell, Microsoft, Nestle.</li>
-                                 <li><strong>Deep Decarbonization:</strong> Credit buyers reduce emissions nearly 2x faster than non-buyers (Sylvera).</li>
-                                <li><strong>Forward Agreements:</strong> Top 50 EU companies plan to buy 81M+ tons by 2030 (Goodcarbon).</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="bg-red-100 p-6 rounded-lg shadow-md">
+                     <h3 class="text-2xl font-bold text-red-800 mb-3">Weaknesses & Threats</h3>
+                     <ul class="list-disc list-inside space-y-2">
+                        <li>Capital-intensive operations requiring scale.</li>
+                        <li>Dependence on evolving regulatory frameworks.</li>
+                        <li>Market volatility in carbon credit pricing.</li>
+                        <li>Technological breakthroughs in tech-based removals.</li>
+                        <li>Pipeline to be acquired is slow to materialize.</li>
+                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- PAGE 2: Strategy and Innovation -->
-        <section id="page2" class="page">
-            <h2 class="section-title">A Multi-Faceted Growth Strategy</h2>
-            
-            <!-- Capital & Innovation -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-                <div class="card">
-                    <h3 class="font-bold text-xl mb-3 text-sky-700 flex items-center"><i data-lucide="coins" class="mr-2"></i>Capital Strategy</h3>
-                    <p class="mb-4">A disciplined, dual-pronged approach to fund scaling and restoration, favoring on-balance sheet control to align with institutional standards.</p>
-                    <div class="space-y-3">
-                        <div class="detail-card"><p class="font-bold">$20-25M Series B Equity:</p><p class="text-sm">To expand origination team and scale corporate operations.</p></div>
-                        <div class="detail-card"><p class="font-bold">$60-80M DFI Structured Debt:</p><p class="text-sm">To fund large-scale, capital-intensive restoration activities on acquired concessions.</p></div>
-                    </div>
-                </div>
-                 <div class="card">
-                    <h3 class="font-bold text-xl mb-3 text-indigo-700 flex items-center"><i data-lucide="layers" class="mr-2"></i>Innovation: The PEG Product</h3>
-                    <p class="mb-4">A first-of-its-kind securitized product to differentiate Forest Carbon, monetize biodiversity assets, and cater to diverse investor risk appetites.</p>
-                    <div class="space-y-2 text-center">
-                        <div class="p-2 bg-green-50 border border-green-200 rounded-lg"><p class="font-bold text-green-800">Top Tranche (Low Risk):</p><p class="text-xs">High-Integrity Removal Credits</p></div>
-                        <div class="p-2 bg-yellow-50 border border-yellow-200 rounded-lg"><p class="font-bold text-yellow-800">Middle Tranche:</p><p class="text-xs">Lower-Quality / Avoidance Credits</p></div>
-                        <div class="p-2 bg-red-50 border border-red-200 rounded-lg"><p class="font-bold text-red-800">Bottom Tranche (High Risk):</p><p class="text-xs">Biodiversity Credits</p></div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Strategic Pillars -->
-             <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">Core Strategic Pillars</h3>
-             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="detail-card space-y-2">
-                    <h4 class="font-bold text-lg">Concession Ownership & Control</h4>
-                    <p class="text-sm">Prioritize direct ownership to maintain control and quality. Where not feasible, use standardized JVs to enable rapid, efficient expansion without compromising standards.</p>
-                </div>
-                <div class="detail-card space-y-2">
-                    <h4 class="font-bold text-lg">Offtake & Pricing Strategy</h4>
-                    <p class="text-sm">Minimize reliance on volatile spot markets by prioritizing long-term, bilateral offtake agreements with high-quality corporate buyers to de-risk pricing and secure demand.</p>
-                </div>
-                 <div class="detail-card space-y-2">
-                    <h4 class="font-bold text-lg">Partnership Leverage</h4>
-                    <p class="text-sm">Formalize partnerships with Saratoga and Team Gold to share pipeline sourcing, due diligence, and underwriting responsibilities, mitigating key execution and pipeline risks.</p>
-                </div>
-                 <div class="detail-card space-y-2">
-                    <h4 class="font-bold text-lg">Strategic Diversification</h4>
-                    <p class="text-sm">Achieve >10% revenue from non-carbon PES (e.g., biodiversity credits) to hedge against carbon price volatility and build long-term resilience.</p>
-                </div>
-                 <div class="detail-card space-y-2">
-                    <h4 class="font-bold text-lg">Retail & Brand Expansion</h4>
-                    <p class="text-sm">Launch a low-cost, high-upside retail channel for biodiversity/carbon credits to enhance brand visibility, gain operational experience, and create a new revenue stream with minimal investment.</p>
-                </div>
-                 <div class="detail-card space-y-2">
-                    <h4 class="font-bold text-lg">Biodiversity Leadership</h4>
-                    <p class="text-sm">While the market is immature, actively shape its architecture through innovation like the PEG. Position Forest Carbon as a thought leader in setting standards for emerging nature-based markets.</p>
-                </div>
-             </div>
-        </section>
+    </main>
 
-        <!-- PAGE 3: Analysis & Landscape -->
-        <section id="page3" class="page">
-            <h2 class="section-title">Competitive Landscape & Analysis</h2>
-            
-            <!-- SWOT Analysis -->
-            <div class="mb-16">
-                <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">SWOT Analysis</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="space-y-6"><div class="bg-green-100 p-6 rounded-xl border border-green-200"><h4 class="font-bold text-lg text-green-800 mb-3">Strengths</h4><ul class="list-disc list-inside space-y-2 text-sm text-green-900"><li>Top 5 global developer of forest restoration projects</li><li>One of the 10 largest landowners in Indonesia, a high-barrier market</li><li>Established presence with strong investor partnerships (Saratoga, AXA)</li><li>Proven ability to fundraise and compelling storytelling capabilities</li><li>Patient capital nature of the Series B funding</li></ul></div><div class="bg-red-100 p-6 rounded-xl border border-red-200"><h4 class="font-bold text-lg text-red-800 mb-3">Weaknesses</h4><ul class="list-disc list-inside space-y-2 text-sm text-red-900"><li>Capital-intensive operations requiring significant funding to scale</li><li>High dependence on regulatory frameworks and market dynamics</li><li>Singularly exposed to Indonesia, increasing jurisdictional risk</li><li>Lack of bankability and mature markets for biodiversity credits</li></ul></div></div>
-                    <div class="space-y-6"><div class="bg-blue-100 p-6 rounded-xl border border-blue-200"><h4 class="font-bold text-lg text-blue-800 mb-3">Opportunities</h4><ul class="list-disc list-inside space-y-2 text-sm text-blue-900"><li>Expansion requires immediate capital, creating an investment window</li><li>Develop innovative structured finance vehicles (like PEG) to attract capital</li><li>Growing global demand for high-quality carbon credits and ecosystem services</li><li>Ability to expand into new markets (geographies, retail) and services</li><li>Further branding and marketing possibilities to become a thought leader</li></ul></div><div class="bg-yellow-100 p-6 rounded-xl border border-yellow-200"><h4 class="font-bold text-lg text-yellow-800 mb-3">Threats</h4><ul class="list-disc list-inside space-y-2 text-sm text-yellow-900"><li>High market volatility in carbon credit pricing</li><li>Regulatory changes and ongoing controversies impacting offset projects</li><li>Pipeline to be acquired under Series B is slow to materialize</li><li>Technological breakthroughs in tech-based removals could challenge nature-based solutions</li></ul></div></div>
-                </div>
-            </div>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-8 mt-12">
+        <p>This infographic was generated based on the Forest Carbon Business Plan.</p>
+        <p>&copy; 2025 Forest Carbon. All Rights Reserved.</p>
+    </footer>
 
-            <!-- Peer Analysis -->
-            <div class="mb-16">
-                 <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">Detailed Peer Analysis</h3>
-                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="peer-card-expanded"><p class="font-bold text-lg">Permian Global</p><p class="text-sm font-semibold text-gray-500 mb-2">The Scaled Operator</p><p class="text-sm">Develops REDD+ and ARR projects in high-risk tropical regions. Underpins projects with rigorous science, combining in-situ forest plots with remote sensing (LiDAR, drone surveys) and allometric equations to quantify biomass. A key benchmark for scaled, high-integrity operations.</p></div>
-                    <div class="peer-card-expanded"><p class="font-bold text-lg">Mombak</p><p class="text-sm font-semibold text-gray-500 mb-2">The Reforestation Specialist</p><p class="text-sm">Converts degraded Amazon pastureland into native-species forests. Its model is focused on generating ex-post CDR credits through large-scale restoration, using a hybrid MRV framework and securing financing through long-term offtake agreements.</p></div>
-                    <div class="peer-card-expanded"><p class="font-bold text-lg">Rubicon Carbon</p><p class="text-sm font-semibold text-gray-500 mb-2">The Financial Innovator</p><p class="text-sm">Backed by TPG, Rubicon is financializing the market with products like the Rubicon Carbon Tonne (RCT), a securitized, managed portfolio of diverse credits. Its AA-rated RRT sets a new benchmark for third-party verification and portfolio quality.</p></div>
-                    <div class="peer-card-expanded"><p class="font-bold text-lg">The Landbanking Group</p><p class="text-sm font-semibold text-gray-500 mb-2">The Asset Creator</p><p class="text-sm">Pioneers a model to price natural capital as a balance sheet asset. It translates ecological functions (carbon sequestration, water retention) into traceable, auditable "Natural Capital Units" (NCUs), connecting land stewards directly with capital providers.</p></div>
-                    <div class="peer-card-expanded"><p class="font-bold text-lg">Lestari (Rimba Collective)</p><p class="text-sm font-semibold text-gray-500 mb-2">The Insetting Pioneer</p><p class="text-sm">A collaborative funding model for Scope 3 insetting. Major CPGs (Unilever, Nestlé) fund a portfolio of projects over 25+ year contracts, with outcomes directly tied to their palm oil footprint, ensuring full attribution integrity.</p></div>
-                    <div class="peer-card-expanded"><p class="font-bold text-lg">Revalue</p><p class="text-sm font-semibold text-gray-500 mb-2">The Tech Enabler</p><p class="text-sm">A nature-tech company that enhances project credibility. Its "Verse" software platform uses advanced remote sensing and ecological modeling to improve scientific rigor, generating revenue via service fees and sharing in project success.</p></div>
-                 </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="text-center pt-8 mt-8">
-            <p class="text-gray-500 text-sm">&copy; 2025 Forest Carbon. All Rights Reserved. | Infographic generated based on internal business plan.</p>
-        </footer>
-    </div>
-    
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
-    </script>
 </body>
 </html>
